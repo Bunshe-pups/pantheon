@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет администратора</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="header">
+            <img src="../img/logo.png" alt="Логотип" />
+            <div class = "pndz">
+               <h4>Пантеон Дизайнера</h4>
+            </div>
+            <div class="hmain">
+               <a href="pd.html">Главная</a>
+            </div>
+            <div class="habout">
+               <a href="о нас.html">О нас</a>
+            </div>
+            <div class="hfaq">
+               <a href="FAQ.html">FAQ</a>
+            </div>
+            <div class="hvhod">
+               <a href="login.html" class="hvxod">Войти</a>
+            </div>
+         </div>
+
+        <main class="admin-container">
+            <h1>👤 Личный кабинет администратора</h1>
+            <button id="addArticleBtn" class="admin-btn">📝 Добавить статью</button>
+            <button id="deleteArticleBtn" class="admin-btn">🗑️ Удалить статью</button>
+        </div>
+
+        <!-- Модальное окно: Добавить статью -->
+        <div id="addArticleModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Новая статья</h2>
+                <input type="text" id="articleTitle" placeholder="Название статьи" required>
+                <textarea id="articleContent" rows="8" placeholder="Текст статьи (поддерживает HTML-теги: <p>, <img>, <b>, и т.д.)"></textarea>
+                <button id="saveArticleBtn" class="submit-btn">Сохранить статью</button>
+            </div>
+        </div>
+
+        <!-- Модальное окно: Удалить статью -->
+        <div id="deleteArticleModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Удаление статьи</h2>
+                <p>Выберите статью для удаления:</p>
+                <div id="articlesList" class="article-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+         <hr>
+         <div class="infooter">
+            <div class="onas">
+               <h3>Адреса</h3>
+               <p>г.Санкт-Петербург, проспект Энгельса 23</p>
+               <p>г.Санкт-Петербург, проспект Энгельса 129, к.4</p>
+            </div>
+
+            <div class="contacts1">
+               <h3>Контакты</h3>
+               <p>Email: pantheon.dzn@google.com</p>
+               <p>Тел: +7 (964) 389-98-16</p>
+            </div>
+
+            <div class="diskl">
+               <h3>Сторонние ресурсы</h3>
+               <p>
+                  Сервис Пантеон Дизайнера может содержать информацию, взятую из других источников.
+                  Все внешние ресурсы указаны по данной <a href="внешние ресурсы.html">ссылке</a>
+               </p>  
+            </div>
+         </div>
+         <hr>
+         <div class="date">
+            <p>2026 Выполнено в рамках учебной работы МДК 04.02</p>
+         </div>
+         <hr>
+      </footer>
+      
+    <script src="../js/admin.js"></script>
+</body>
+</html>

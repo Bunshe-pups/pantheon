@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в панель администратора</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="header">
+            <img src="../img/logo.png" alt="Логотип" />
+            <div class = "pndz">
+               <h4>Пантеон Дизайнера</h4>
+            </div>
+            <div class="hmain">
+               <a href="pd.html">Главная</a>
+            </div>
+            <div class="habout">
+               <a href="о нас.html">О нас</a>
+            </div>
+            <div class="hfaq">
+               <a href="FAQ.html">FAQ</a>
+            </div>
+            <div class="hvhod">
+               <a href="login.html" class="hvxod">Войти</a>
+            </div>
+         </div>
+         <div class="back">
+    <main class="login-container">
+        <h1>Вход в панель администратора</h1>
+        <form id="loginForm" class="feedback-form">
+            <div class="form-group">
+                <h3><label for="username">Логин</label></h3>
+                <h3><input type="text" id="username" placeholder="Введите логин" required></h3>
+            </div>
+            <div class="form-group">
+                <h3><label for="password">Пароль</label></h3>
+                <h3><input type="password" id="password" placeholder="Введите пароль" required></h3>
+            </div>
+            <p id="errorMsg" style="color: #ff6b6b; display: none; margin-top: 10px;">❌ Неверный логин или пароль</p>
+            <button type="submit" class="submit-btn">Войти</button>
+        </form>
+    </main>
+    </div>
+
+    <footer>
+         <hr>
+         <div class="infooter">
+            <div class="onas">
+               <h3>Адреса</h3>
+               <p>г.Санкт-Петербург, проспект Энгельса 23</p>
+               <p>г.Санкт-Петербург, проспект Энгельса 129, к.4</p>
+            </div>
+
+            <div class="contacts1">
+               <h3>Контакты</h3>
+               <p>Email: pantheon.dzn@google.com</p>
+               <p>Тел: +7 (964) 389-98-16</p>
+            </div>
+
+            <div class="diskl">
+               <h3>Сторонние ресурсы</h3>
+               <p>
+                  Сервис Пантеон Дизайнера может содержать информацию, взятую из других источников.
+                  Все внешние ресурсы указаны по данной <a href="внешние ресурсы.html">ссылке</a>
+               </p>  
+            </div>
+         </div>
+         <hr>
+         <div class="date">
+            <p>2026 Выполнено в рамках учебной работы МДК 04.02</p>
+         </div>
+         <hr>
+      </footer>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

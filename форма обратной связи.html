@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Обратная связь</title>
+  <style>
+    :root {
+      --primary: #5e6168;
+      --primary-hover: #5e6168;
+      --border: #cbd5e1;
+      --radius: 10px;
+    }
+    
+    .feedback-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h1, h2 {
+      color:black;
+    }
+    
+    label { 
+        display: block; 
+        margin-bottom: 0.4rem; 
+        margin-top: 1rem; 
+        font-weight: 500; 
+        font-size: 0.95rem; 
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.85rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .gsr{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+            <img src="../img/logo.png" alt="Логотип" />
+            <div class = "pndz">
+               <h4>Пантеон Дизайнера</h4>
+            </div>
+            <div class="hmain">
+               <a href="pd.html">Главная</a>
+            </div>
+            <div class="habout">
+               <a href="о нас.html">О нас</a>
+            </div>
+            <div class="hfaq">
+               <a href="FAQ.html">FAQ</a>
+            </div>
+            <div class="hvhod">
+               <a href="login.html">Войти</a>
+            </div>
+         </div>
+
+  <div class="gsr">
+    <main class="feedback-container">
+      <center>
+        <h1>Обратная связь</h1>
+      </center>
+      <h2>
+        <form action="https://formspree.io/f/xdabljpa" method="POST" class="feedback-form" id="contactForm">
+          <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+      </h2>
+    </main>
+  </div>
+
+  <footer>
+    <hr>
+    <div class="infooter">
+        <div class="onas">
+            <h3>Адреса</h3>
+            <p>г.Санкт-Петербург, проспект Энгельса 23</p>
+            <p>г.Санкт-Петербург, проспект Энгельса 129, к.4</p>
+        </div>
+        <div class="contacts1">
+            <h3>Контакты</h3>
+            <p>Email: pantheon.dzn@google.com</p>
+            <p>Тел: +7 (964) 389-98-16</p>
+        </div>
+        <div class="diskl">
+            <h3>Сторонние ресурсы</h3>
+            <p>Сервис Пантеон Дизайнера может содержать информацию, взятую из других источников. Все внешние ресурсы указаны по данной <a href="внешние ресурсы.html">ссылке</a></p>
+        </div>
+    </div>
+    <hr>
+    <p class="date">2026 Выполнено в рамках учебной работы МДК 04.02</p>
+    <hr>
+</footer>
+
+    <script>
+       document.getElementById('contactForm').addEventListener('submit', function() {
+            const btn = this.querySelector('.submit-btn');
+            btn.textContent = 'Отправка...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true; 
+        });
+  </script>
+</body>
+</html>
